@@ -1,10 +1,12 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import TextComponent from "./components/textComponent";
+import Header from "./components/header"
 
 export default function Home() {
   return (
     <div className={styles.page}>
+        <Header></Header>
       <main className={styles.main}>
         <TextComponent></TextComponent>
       </main>

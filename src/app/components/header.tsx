@@ -1,6 +1,9 @@
+import styles from "./styles/headerStyle.module.css"
+
 export default function Header() {
     return (
-        <div>
+        <div className={styles.header}>
+            <p> - </p>
         </div>
     );
 }
