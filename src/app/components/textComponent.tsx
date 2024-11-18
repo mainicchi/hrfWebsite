@@ -6,7 +6,6 @@ interface TextComponentProps {
     pictureOnRight: boolean
 }
 
-
 export default function TextComponent(props: TextComponentProps) {
     if (props.pictureOnRight) {
         return (
