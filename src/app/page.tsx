@@ -8,7 +8,7 @@ export default function Home() {
     <div className={styles.page}>
         <Header></Header>
       <main className={styles.main}>
-        <TextComponent></TextComponent>
+        <TextComponent pictureOnRight={true}/>
       </main>
       <footer className={styles.footer}>
         <a
