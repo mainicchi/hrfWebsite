@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.textComponentContainer {
+    width: 100%;
+    height: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: space-between;
+    align-items: flex-start;
+    display: inline-flex;
+
+    .textPartContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 30px;
+        display: inline-flex;
+
+        .textTitle {
+            width: 682px;
+            color: black;
+            font-size: 48px;
+            font-family: "Open Sans";
+            font-weight: 700;
+            word-wrap: break-word
+        }
+
+        .textBody {
+            width: 682px;
+            color: black;
+            font-size: 20px;
+            font-family: "Open Sans";
+            font-weight: 400;
+            word-wrap: break-word
+        }
+
+        .textLinkContainer {
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            background: #E72B26;
+            border-radius: 8px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            display: inline-flex;
+
+            .textLinkContent {
+                text-align: center;
+                color: white;
+                font-size: 16px;
+                font-family: "Open Sans";
+                font-weight: 400px;
+                word-wrap: break-word
+            }
+        }
+    }
+
+    .textImage {
+        width: 667px;
+        height: 629px;
+    }
+
+    .textImageLeft {
+        width: 667px;
+        height: 629px;
+        margin-right: 25px;
+    }
+}

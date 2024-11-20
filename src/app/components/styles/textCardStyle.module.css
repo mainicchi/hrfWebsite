@@ -1,0 +1,55 @@
+.card {
+    height: 25%;
+    width: 100%;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 81px;
+    padding-bottom: 81px;
+    background: #8DBBE1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 46;
+    display: inline-flex;
+
+    .cardHeader {
+        align-self: stretch;
+        color: black;
+        font-size: 36px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        word-wrap: break-word;
+    }
+
+    .cardBody {
+        align-self: stretch;
+        color: black;
+        font-size: 20px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        line-height: 39px;
+        word-wrap: break-word;
+    }
+
+    .cardLink {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        background: #005DAA;
+        border-radius: 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        display: inline-flex;
+
+        .cardLinkText {
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+    }
+}
