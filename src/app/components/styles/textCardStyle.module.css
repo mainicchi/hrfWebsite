@@ -1,6 +1,6 @@
 .card {
     height: 25%;
-    width: 100%;
+    width: 60%;
     padding-left: 75px;
     padding-right: 75px;
     padding-top: 81px;
@@ -11,6 +11,7 @@
     align-items: flex-start;
     gap: 46;
     display: inline-flex;
+    align-self: center;
 
     .cardHeader {
         align-self: stretch;

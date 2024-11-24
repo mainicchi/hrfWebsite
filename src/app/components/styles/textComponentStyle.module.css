@@ -7,9 +7,10 @@
     padding-right: 100px;
     padding-top: 50px;
     padding-bottom: 50px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     display: inline-flex;
+    align-self: center;
 
     .textPartContainer {
         flex-direction: column;
@@ -62,11 +63,12 @@
     .textImage {
         width: 667px;
         height: 629px;
+        margin-left: auto;
     }
 
     .textImageLeft {
         width: 667px;
         height: 629px;
-        margin-right: 25px;
+        margin-right: auto;
     }
 }
