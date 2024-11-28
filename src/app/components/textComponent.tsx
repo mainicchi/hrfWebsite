@@ -6,6 +6,9 @@ interface TextComponentProps {
     pictureOnRight: boolean
     containsLinkButton: boolean
     buttonText?: string
+    headerText: string
+    bodyText: string
+    pictureLink: string
 }
 
 export default function TextComponent(props: TextComponentProps) {
@@ -13,21 +16,21 @@ export default function TextComponent(props: TextComponentProps) {
         props.pictureOnRight ?
             <div className={styles.textComponentContainer}>
                 <div className={styles.textPartContainer}>
-                    <div className={styles.textTitle}>Otsikko</div>
-                    <div className={styles.textBody}>Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.<br /><br />Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.<br /><br />Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.</div>
+                    <div className={styles.textTitle}>{props.headerText}</div>
+                    <div className={styles.textBody}>{props.bodyText}</div>
                     {props.containsLinkButton ?
                         <div className={styles.textLinkContainer}>
                             <div className={styles.textLinkContent}>{props.buttonText}</div>
                         </div> : null}
                 </div>
-                <img className={styles.textImage} src="https://via.placeholder.com/667x629" />
+                <img className={styles.textImage} src={props.pictureLink} />
             </div>
             :
             <div className={styles.textComponentContainer}>
-                <img className={styles.textImageLeft} src="https://via.placeholder.com/667x629" />
+                <img className={styles.textImageLeft} src={props.pictureLink} />
                 <div className={styles.textPartContainer}>
-                    <div className={styles.textTitle}>Otsikko</div>
-                    <div className={styles.textBody}>Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.<br /><br />Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.<br /><br />Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.</div>
+                    <div className={styles.textTitle}>{props.headerText}</div>
+                    <div className={styles.textBody}>{props.bodyText}</div>
                     {props.containsLinkButton ?
                         <div className={styles.textLinkContainer}>
                             <div className={styles.textLinkContent}>{props.buttonText}</div>

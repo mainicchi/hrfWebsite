@@ -9,7 +9,7 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <TextComponent pictureOnRight={false} containsLinkButton={false} />
-        <TextComponent pictureOnRight={true} containsLinkButton={true} buttonText="Tutustu ohjelmaan"/>
+        <TextComponent pictureOnRight={true} containsLinkButton={true} buttonText="Tutustu ohjelmaan" headerText="" bodyText="" pictureLink="" />
         <TextComponent pictureOnRight={false} containsLinkButton={true} buttonText="Tutustu kilpailijoihin ja seuraa tuloksia täältä"/>
         <TextComponent pictureOnRight={true} containsLinkButton={true} buttonText="Lue lisää radasta ja tarkemmat kartat täältä"/>
         <TextComponent pictureOnRight={false} containsLinkButton={true} buttonText="Tutustu harrasteparkkiin"/>
