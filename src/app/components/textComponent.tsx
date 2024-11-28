@@ -11,13 +11,18 @@ interface TextComponentProps {
     pictureLink: string
 }
 
+function NewLineText(text: string) {
+    const newText = text.split('\n').map(str => <p>{str}<br/><br/></p>);
+    return newText
+}
+
 export default function TextComponent(props: TextComponentProps) {
     return (
         props.pictureOnRight ?
             <div className={styles.textComponentContainer}>
                 <div className={styles.textPartContainer}>
                     <div className={styles.textTitle}>{props.headerText}</div>
-                    <div className={styles.textBody}>{props.bodyText}</div>
+                    <div className={styles.textBody}>{NewLineText(props.bodyText)}</div>
                     {props.containsLinkButton ?
                         <div className={styles.textLinkContainer}>
                             <div className={styles.textLinkContent}>{props.buttonText}</div>
@@ -30,7 +35,7 @@ export default function TextComponent(props: TextComponentProps) {
                 <img className={styles.textImageLeft} src={props.pictureLink} />
                 <div className={styles.textPartContainer}>
                     <div className={styles.textTitle}>{props.headerText}</div>
-                    <div className={styles.textBody}>{props.bodyText}</div>
+                    <div className={styles.textBody}>{NewLineText(props.bodyText)}</div>
                     {props.containsLinkButton ?
                         <div className={styles.textLinkContainer}>
                             <div className={styles.textLinkContent}>{props.buttonText}</div>

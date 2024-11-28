@@ -8,12 +8,12 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <TextComponent pictureOnRight={false} containsLinkButton={false} />
-        <TextComponent pictureOnRight={true} containsLinkButton={true} buttonText="Tutustu ohjelmaan" headerText="" bodyText="" pictureLink="" />
-        <TextComponent pictureOnRight={false} containsLinkButton={true} buttonText="Tutustu kilpailijoihin ja seuraa tuloksia täältä"/>
-        <TextComponent pictureOnRight={true} containsLinkButton={true} buttonText="Lue lisää radasta ja tarkemmat kartat täältä"/>
-        <TextComponent pictureOnRight={false} containsLinkButton={true} buttonText="Tutustu harrasteparkkiin"/>
-        <TextComponent pictureOnRight={true} containsLinkButton={true} buttonText="Lue lisää"/>
+        <TextComponent pictureOnRight={false} containsLinkButton={false} headerText="" bodyText="" pictureLink=""/>
+        <TextComponent pictureOnRight={true} containsLinkButton={true} buttonText="Tutustu ohjelmaan" headerText="" bodyText={""} pictureLink="" />
+        <TextComponent pictureOnRight={false} containsLinkButton={true} buttonText="Tutustu kilpailijoihin ja seuraa tuloksia täältä" headerText="" bodyText="" pictureLink=""/>
+        <TextComponent pictureOnRight={true} containsLinkButton={true} buttonText="Lue lisää radasta ja tarkemmat kartat täältä" headerText="" bodyText="" pictureLink=""/>
+        <TextComponent pictureOnRight={false} containsLinkButton={true} buttonText="Tutustu harrasteparkkiin" headerText="" bodyText="" pictureLink=""/>
+        <TextComponent pictureOnRight={true} containsLinkButton={true} buttonText="Lue lisää" headerText="" bodyText="" pictureLink=""/>
       </main>
     </div>
   );
