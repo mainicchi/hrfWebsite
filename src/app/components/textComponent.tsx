@@ -28,7 +28,7 @@ export default function TextComponent(props: TextComponentProps) {
                             <div className={styles.textLinkContent}>{props.buttonText}</div>
                         </div> : null}
                 </div>
-                <img className={styles.textImage} src={props.pictureLink} />
+                <img className={styles.textImage} src="..\images\galleria_1.jpg" />
             </div>
             :
             <div className={styles.textComponentContainer}>

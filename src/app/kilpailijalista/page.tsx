@@ -1,6 +1,6 @@
 import styles from "../page.module.css";
 
-export default function Ohjelma() {
+export default function Kilpailijalista() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
