@@ -13,8 +13,7 @@ export default function Kilpailu() {
       <Image style={{alignSelf: 'center'}} src="/images/kilpailu_header.png" alt="" width="1730" height="800"></Image>
         <h1 className={styles.headerTitle}>KILPAILU</h1>
         <div className={styles.sectionTitle}>
-          <div className={styles.underline}>
-          </div>
+          <div className={styles.underline}/>
         </div>
       <TextComponent pictureOnRight={true} containsLinkButton={true} buttonText="Katso lista" headerText={"Kilpailijalista"} bodyText={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."} pictureLink="/images/ohjelma_main.png" />
       <h2 className={styles.secondTitle}>Kilpaluokat</h2>
