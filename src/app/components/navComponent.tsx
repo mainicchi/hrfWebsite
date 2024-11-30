@@ -11,7 +11,7 @@ export default function Navigation() {
     return (
         <div className={styles.navContainer}>
                 <div className={styles.navItemsContainer}>
-                    <img style={{ width: 90, height: 90 }} src="https://via.placeholder.com/90x90" onClick={() => router.push("/")}/>
+                    <img style={{ width: 90, height: 90 }} src="/images/HRF_logo.png" onClick={() => router.push("/")}/>
                     <Link href="/ohjelma" className={isActive("/ohjelma") ? styles.activeNavItem : styles.navItem}>Ohjelma</Link>
                     <Link href="/kilpailu" className={isActive("/kilpailu") ? styles.activeNavItem : styles.navItem}>Kilpailu</Link>
                     <Link href="/rata" className={isActive("/rata") ? styles.activeNavItem : styles.navItem}>Rata ja kartat</Link>
@@ -20,7 +20,7 @@ export default function Navigation() {
                     <Link href="/kilpailijoille" className={isActive("/kilpailijoille") ? styles.activeNavItem : styles.navItem}>Kilpailijoille</Link>
                     <Link href="/medialle" className={isActive("/medialle") ? styles.activeNavItem : styles.navItem}>Medialle</Link>
                 </div>
-            <img style={{ width: 47, height: 30 }} src="https://via.placeholder.com/47x30" />
+            <img style={{ width: 47, height: 30 }} src="/images/Flag_of_Sweden.svg.png" />
         </div>
     );
 }
