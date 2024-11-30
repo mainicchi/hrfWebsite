@@ -12,6 +12,8 @@
     gap: 46;
     display: inline-flex;
     align-self: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
 
     .cardHeader {
         align-self: stretch;
@@ -54,3 +56,48 @@
         }
     }
 }
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px 0;
+    width: 60%;
+    align-self: center;
+  }
+  
+  .textSection {
+    flex: 1;
+  }
+  
+  .positionedBox {
+    height: 25%;
+    width: 40%;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 81px;
+    padding-bottom: 81px;
+    background: #8DBBE1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 46;
+    display: inline-flex;
+    align-self: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+  }
+  
+  .positionedBox img {
+    width: 100%; /* Ensures the image fits within the box */
+    border-radius: 8px; /* Optional: match box radius */
+  }
+  
+  .positionedBox.right {
+    order: 2; /* Default for placing on the right */
+  }
+  
+  .positionedBox.left {
+    order: -1; /* Moves box to the left */
+  }

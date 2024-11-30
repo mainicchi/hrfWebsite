@@ -5,6 +5,7 @@ import Header from "../components/headerComponent"
 import Footer from "../components/footerComponent"
 import TextCardComponent from "../components/textCardComponent";
 import Navigation from "../components/navComponent"
+import TextCardSmall from "../components/textCardSmallComponent";
 
 export default function Kilpailu() {
   return (
@@ -24,6 +25,7 @@ export default function Kilpailu() {
       <h4>Historic Formulat</h4>
       <p>Historic Formulat ovat pääsääntöisesti aitoja ja alkuperäisiä aikakautensa kilpailuhistorian omaavia kilpa-autoja. Merkittävässä tienraivaajan osassa maamme formulahistoriassa ovat olleet Volkswagenin Type 1 -tekniikkaan (VW kupla) perustuvat Formula V:t vuosilta 1966–1981. Muita lähdöissä nähtäviä historiallisia monopostoja ovat Formula Fordit sekä uudemmat Formula V:t, Formula 3:set ja Formula 4:set. Historic Formulat ajavat kansainvälisillä FIA liite K:n sekä aikakautensa säännöillä.</p>
       <h2 className={styles.secondTitle}>Tulokset</h2>
+      <TextCardSmall></TextCardSmall>
       <TextCardComponent containsLinkButton={true} buttonText="Lisätietoja" headerText={""} bodyText={"Tulokset ajantasaisesti kisaviikonloppuna HRF:llä on kilpailussa reaaliaikainen ajanoton seuranta. Tuloksia voi seurata kilpailun aikana mobiililaitteilla Race-Monitor -sovelluksella, jonka voi ladata (Android, iOS ja Windows Phone -laitteille) ja web-selaimella (selaimessa on oltava Flash-tuki)."}/>
       <TextCardComponent containsLinkButton={true} buttonText="Lisätietoja" headerText={""} bodyText={"Tulokset kilpailujen jälkeen Kilpailun tulokset ovat nähtävissä internetissä MYLAPS Speedhive -sivustolla."}/>
       </main>
