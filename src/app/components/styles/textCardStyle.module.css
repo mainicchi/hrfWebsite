@@ -14,6 +14,7 @@
     align-self: center;
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+    margin-bottom: 20px;
 
     .cardHeader {
         align-self: stretch;
@@ -33,27 +34,27 @@
         line-height: 39px;
         word-wrap: break-word;
     }
+}
 
-    .cardLink {
-        padding-left: 24px;
-        padding-right: 24px;
-        padding-top: 16px;
-        padding-bottom: 16px;
-        background: #005DAA;
-        border-radius: 8px;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        display: inline-flex;
+.cardLink {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background: #005DAA;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
 
-        .cardLinkText {
-            text-align: center;
-            color: white;
-            font-size: 16px;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 400;
-            word-wrap: break-word;
-        }
+    .cardLinkText {
+        text-align: center;
+        color: white;
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        word-wrap: break-word;
     }
 }
 

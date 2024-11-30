@@ -7,7 +7,7 @@ export default function Kilpailijoille() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-      <Image className="" src="/images/kilpailijoille_header.png" alt="" width="1730" height="800"></Image>
+      <Image className="" src="/images/kilpailijoille_header.png" alt="" width="1730" height="800" style={{alignSelf: 'center'}}></Image>
         <h1 className={styles.headerTitle}>KILPAILIJOILLE</h1>
         <div className={styles.sectionTitle}>
           <div className={styles.underline}>
