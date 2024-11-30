@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import TextComponent from "./components/textComponent";
 import Footer from "./components/footerComponent"
 import TextCardComponent from "./components/textCardComponent";
+import ImageGallery from "./components/imageGallery";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
           </div>
         </div>
         <h1 className={styles.headerTitle}>2024 HISTORIC GRAND RACESSA KUVATTUJA KUVAGALLERIOITA NETISSÄ</h1>
+        <ImageGallery></ImageGallery>
       </main>
     </div>
   );
