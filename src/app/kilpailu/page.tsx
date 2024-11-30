@@ -5,6 +5,7 @@ import Header from "../components/headerComponent"
 import Footer from "../components/footerComponent"
 import TextCardComponent from "../components/textCardComponent";
 import Navigation from "../components/navComponent"
+import TextCardSmall from "../components/textCardSmallComponent";
 
 export default function Kilpailu() {
   return (
@@ -13,8 +14,7 @@ export default function Kilpailu() {
       <Image style={{alignSelf: 'center'}} src="/images/kilpailu_header.png" alt="" width="1730" height="800"></Image>
         <h1 className={styles.headerTitle}>KILPAILU</h1>
         <div className={styles.sectionTitle}>
-          <div className={styles.underline}>
-          </div>
+          <div className={styles.underline}/>
         </div>
       <TextComponent pictureOnRight={true} containsLinkButton={true} buttonText="Katso lista" headerText={"Kilpailijalista"} bodyText={"Tutustu kaikkiin kilpailijoihin ja heidän suorituksiinsa. Pääset tarkastelemaan täydellistä listaa painamalla alla olevaa nappia."} pictureLink="/images/ohjelma_main.png" />
       <div className={styles.sectionTitle}>
@@ -33,6 +33,7 @@ export default function Kilpailu() {
           </div>
         </div>
       <h2 className={styles.secondTitle}>Tulokset</h2>
+      <TextCardSmall></TextCardSmall>
       <TextCardComponent containsLinkButton={true} buttonText="Lisätietoja" headerText={""} bodyText={"Tulokset ajantasaisesti kisaviikonloppuna HRF:llä on kilpailussa reaaliaikainen ajanoton seuranta. Tuloksia voi seurata kilpailun aikana mobiililaitteilla Race-Monitor -sovelluksella, jonka voi ladata (Android, iOS ja Windows Phone -laitteille) ja web-selaimella (selaimessa on oltava Flash-tuki)."}/>
       <TextCardComponent containsLinkButton={true} buttonText="Lisätietoja" headerText={""} bodyText={"Tulokset kilpailujen jälkeen Kilpailun tulokset ovat nähtävissä internetissä MYLAPS Speedhive -sivustolla."}/>
       </main>
