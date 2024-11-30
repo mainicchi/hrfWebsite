@@ -6,7 +6,7 @@ export default function Tuotteet() {
     <div className={styles.page}>
       <main className={styles.main}>
       </main>
-      <h1>HRF-tuotteet</h1>
+      <h1 className={styles.headerTitle}>HRF-tuotteet</h1>
       <Image className="" src="/images/tuotteet.jpg" alt="" width="1368" height="953"></Image>
     </div>
   );

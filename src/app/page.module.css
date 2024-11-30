@@ -16,6 +16,39 @@
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
+  overflow: hidden;
+  color: #000;
+  text-align: center;
+  text-overflow: ellipsis;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  
+}
+
+.secondTitle {
+  display: flex;
+width: 1728px;
+padding: 78px 200px;
+align-items: flex-start;
+gap: 10px;
+overflow: hidden;
+color: #000;
+text-overflow: ellipsis;
+font-size: 46px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.ohjelmaPhoto{
+  display: flex;
+  padding: 50px 200px;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  align-self: stretch;
 }
 
 @media (prefers-color-scheme: dark) {
