@@ -24,6 +24,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  align-self: center;
   
 }
 
@@ -200,4 +201,22 @@ a.secondary {
   .logo {
     filter: invert();
   }
+}
+
+.sectionTitle {
+  text-align: center; /* Center align the title and the line */
+  margin-bottom: 20px;
+}
+
+.sectionTitle h1 {
+  font-size: 2rem; /* Adjust the font size as needed */
+  margin: 0;
+}
+
+.sectionTitle .underline {
+  width: 50%; /* Adjust the width of the line */
+  height: 4px; /* Adjust the thickness of the line */
+  background-color: #0056b3; /* Replace with your desired color */
+  margin: 8px auto 0; /* Adjust spacing around the line */
+  border-radius: 2px; /* Optional: round the edges */
 }

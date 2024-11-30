@@ -11,7 +11,7 @@ export default function Navigation() {
     return (
         <div className={styles.navContainer}>
                 <div className={styles.navItemsContainer}>
-                    <img style={{ width: 90, height: 90 }} src="/images/HRF_logo.png" onClick={() => router.push("/")}/>
+                    <img style={{ width: 90, height: 90, cursor: "pointer" }} src="/images/HRF_logo.png" onClick={() => router.push("/")}/>
                     <Link href="/ohjelma" className={isActive("/ohjelma") ? styles.activeNavItem : styles.navItem}>Ohjelma</Link>
                     <Link href="/kilpailu" className={isActive("/kilpailu") ? styles.activeNavItem : styles.navItem}>Kilpailu</Link>
                     <Link href="/rata" className={isActive("/rata") ? styles.activeNavItem : styles.navItem}>Rata ja kartat</Link>
