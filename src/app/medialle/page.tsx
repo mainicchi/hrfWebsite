@@ -1,10 +1,6 @@
 import styles from "../page.module.css";
 import Image from "next/image";
-import TextComponent from "../components/textComponent";
-import Header from "../components/headerComponent"
-import Footer from "../components/footerComponent"
 import TextCardComponent from "../components/textCardComponent";
-import Navigation from "../components/navComponent"
 import TextCardSmall from "../components/textCardSmallComponent";
 
 

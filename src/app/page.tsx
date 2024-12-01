@@ -1,8 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import TextComponent from "./components/textComponent";
-import Footer from "./components/footerComponent"
-import TextCardComponent from "./components/textCardComponent";
 import ImageGallery from "./components/imageGallery";
 
 export default function Home() {

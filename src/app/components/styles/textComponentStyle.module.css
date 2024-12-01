@@ -7,7 +7,7 @@
     padding-right: 100px;
     padding-top: 50px;
     padding-bottom: 50px;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-start;
     display: inline-flex;
     align-self: center;
@@ -24,7 +24,7 @@
             color: black;
             font-size: 48px;
             font-family: "Open Sans";
-            font-weight: 700;
+            font-weight: 1000;
             word-wrap: break-word
         }
 
@@ -34,7 +34,7 @@
             font-size: 18px;
             font-family: "Open Sans";
             font-weight: 400;
-            word-wrap: break-word
+            word-wrap: break-word;
         }
 
         .textLinkContainer {
@@ -68,12 +68,10 @@
     .textImage {
         width: 667px;
         height: 629px;
-        margin-left: auto;
     }
 
     .textImageLeft {
         width: 667px;
         height: 629px;
-        margin-right: auto;
     }
 }

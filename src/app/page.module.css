@@ -37,10 +37,12 @@ gap: 10px;
 overflow: hidden;
 color: #000;
 text-overflow: ellipsis;
-font-size: 46px;
+font-size: 56px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
+align-self: center;
+justify-content: center;
 }
 
 .thierdTitle {
