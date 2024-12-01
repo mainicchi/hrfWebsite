@@ -30,12 +30,14 @@ export default function DoubleTextCard(props: TextCardProps) {
     return (
             <div className={styles.container}>
                 <PositionedBox position={'left'}>
+                    <h2>{props.boxHeaderText}</h2>
                     <p>{props.boxBodyText}</p>
                     {props.firstBoxHasButton ? <div className={styles.cardLink}>
                         <div className={styles.cardLinkText}>{props.firstBoxButtonText}</div>
                     </div> : null}
                 </PositionedBox>
                 <PositionedBox position={'right'}>
+                    <h2>{props.secondBoxHeaderText}</h2>
                     <p>{props.secondBoxBodyText}</p>
                     {props.secondBoxHasButton ? <div className={styles.cardLink}>
                         <div className={styles.cardLinkText}>{props.secondBoxButtonText}</div>
