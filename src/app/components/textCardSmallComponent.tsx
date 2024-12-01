@@ -1,7 +1,7 @@
 import styles from "./styles/textCardStyle.module.css"
 
 interface TextCardProps {
-    bodyText: string
+    bodyText: string | React.ReactNode
     headerText: string
     boxHeaderText: string
     boxBodyText: string
@@ -39,7 +39,7 @@ export default function TextCardSmall(props: TextCardProps) {
                 <div className={styles.textSection}>
                     <h2 style={{ marginBottom: '25px' }}>{props.headerText}</h2>
                     <p>
-                        {NewLineText(props.bodyText)}
+                        {props.bodyText}
                     </p>
                     {props.textHasButton ? <div className={styles.cardLink}>
                         <div className={styles.cardLinkText}>{props.textAreaButtonText}</div>
