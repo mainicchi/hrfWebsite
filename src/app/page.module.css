@@ -43,6 +43,24 @@ font-weight: 700;
 line-height: normal;
 }
 
+.thierdTitle {
+  display: flex;
+  width: 1728px;
+  padding: 100px 100px 50px 100px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  overflow: hidden;
+  color: #000;
+  text-align: center;
+  text-overflow: ellipsis;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  align-self: center;
+}
+
 .ohjelmaPhoto{
   display: flex;
   padding: 50px 200px;

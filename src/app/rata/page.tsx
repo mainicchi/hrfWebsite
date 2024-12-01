@@ -16,8 +16,7 @@ export default function RataJaKartat() {
           <div className={styles.underline}>
           </div>
         </div>
-        <h2 className={styles.secondTitle}>Ahveniston moottorirata</h2>
-        <p>Ahveniston moottorirata on ainutlaatuinen Pohjoismaissa niin sijaintinsa, 57-vuotisen historiansa kuin vaihtelevien maastomuotojensakin puolesta. Rata sijaitsee Hämeenlinnan kaupunkialueen länsipuolella. Pituudeltaan se on 2840 m metriä, leveydeltään 9-17 metriä ja korkeuseroltaan 32 metriä. Alueen korkeimmat kohdat ovat noin 120 metriä merenpinnasta.</p>
+        <TextComponent pictureOnRight={false} containsLinkButton={false} headerText={"Ahveniston moottorirata"} bodyText={"Ahveniston moottorirata on ainutlaatuinen Pohjoismaissa niin sijaintinsa, 57-vuotisen historiansa kuin vaihtelevien maastomuotojensakin puolesta. Rata sijaitsee Hämeenlinnan kaupunkialueen länsipuolella. Pituudeltaan se on 2840 m metriä, leveydeltään 9-17 metriä ja korkeuseroltaan 32 metriä. Alueen korkeimmat kohdat ovat noin 120 metriä merenpinnasta."} pictureLink="/images/rata.png"/>
         <Image className="" src="/images/hgrkartta.png" alt="" width="1000" height="1490" style={{alignSelf: 'center'}}></Image>
         <div className={styles.sectionTitle}>
           <div className={styles.underline}>
