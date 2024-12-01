@@ -1,4 +1,6 @@
 import styles from "./styles/textCardStyle.module.css"
+import { FaExternalLinkAlt } from "react-icons/fa";
+
 
 interface TextCardProps {
     boxHeaderText?: string
@@ -34,14 +36,14 @@ export default function DoubleTextCard(props: TextCardProps) {
                     <h2>{props.boxHeaderText}</h2>
                     <p>{props.boxBodyText}</p>
                     {props.firstBoxHasButton ? <div className={styles.cardLink}>
-                        <div className={styles.cardLinkText}>{props.firstBoxButtonText}</div>
+                        <div className={styles.cardLinkText}><FaExternalLinkAlt/> {props.firstBoxButtonText}</div>
                     </div> : null}
                 </PositionedBox>
                 <PositionedBox position={'right'} hasButton={props.secondBoxHasButton || false}>
                     <h2>{props.secondBoxHeaderText}</h2>
                     <p>{props.secondBoxBodyText}</p>
                     {props.secondBoxHasButton ? <div className={styles.cardLink}>
-                        <div className={styles.cardLinkText}>{props.secondBoxButtonText}</div>
+                        <div className={styles.cardLinkText}><FaExternalLinkAlt/> {props.secondBoxButtonText}</div>
                     </div> : null}
                 </PositionedBox>
             </div>

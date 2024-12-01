@@ -8,6 +8,7 @@
     background-color: #F28C0E; /* Optional: background color for the header */
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 .image {

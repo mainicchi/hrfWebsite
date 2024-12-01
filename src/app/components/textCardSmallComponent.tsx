@@ -1,4 +1,6 @@
 import styles from "./styles/textCardStyle.module.css"
+import { FaExternalLinkAlt } from "react-icons/fa";
+
 
 interface TextCardProps {
     bodyText: string | React.ReactNode
@@ -49,7 +51,7 @@ export default function TextCardSmall(props: TextCardProps) {
                     <h2>{props.boxHeaderText}</h2>
                     <p>{NewLineText(props.boxBodyText)}</p>
                     {props.hasButton ? <div className={styles.cardLink}>
-                        <div className={styles.cardLinkText}>{props.buttonText}</div>
+                        <div className={styles.cardLinkText}><FaExternalLinkAlt/> {props.buttonText}</div>
                     </div> : null}
                 </PositionedBox>
             </div>

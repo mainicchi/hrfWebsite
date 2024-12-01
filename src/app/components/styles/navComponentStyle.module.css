@@ -12,6 +12,7 @@
     display: inline-flex;
     position: sticky;
     top: 10em;
+    z-index: 100;
 
     .navItemsContainer {
         flex: 1 1 0;

@@ -1,6 +1,7 @@
 'use client'
 import styles from "./styles/textCardStyle.module.css"
 import {useRouter} from "next/navigation";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 interface TextCardComponentProps {
     containsLinkButton: boolean
@@ -24,7 +25,8 @@ export default function TextCardComponent(props: TextCardComponentProps) {
             </div>
             <div className={styles.cardBody}>{NewLineText(props.bodyText)}</div>
             <div className={styles.cardLink} onClick={() => router.push(props.buttonLinkDestination as string)}>
-                <div className={styles.cardLinkText}>{props.buttonText}</div>
+                <div className={styles.cardLinkText}>
+                <FaExternalLinkAlt/> {props.buttonText}</div>
             </div>
         </div>
         :
