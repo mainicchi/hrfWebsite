@@ -96,6 +96,11 @@
     }
 }
 
+.cardLink:hover {
+  background: #013D6F;
+  cursor: pointer;
+}
+
 .container {
     display: flex;
     justify-content: space-evenly;
