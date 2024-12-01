@@ -58,7 +58,7 @@ const SearchBarWithDropdown: React.FC<SearchBarWithDropdownProps> = ({
         onClick={handleSearch}
         className={styles.button}
       >
-        Search
+        Hae
       </button>
     </div>
   );
