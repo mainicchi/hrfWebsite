@@ -59,6 +59,10 @@
                 word-wrap: break-word
             }
         }
+
+        .textLinkContainer:hover {
+            background: #952724;
+        }
     }
 
     .textImage {
