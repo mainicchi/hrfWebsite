@@ -24,6 +24,11 @@ const PositionedBox = ({ position, children }: BoxProps) => {
     );
 };
 
+function NewLineText(text: string) {
+    const newText = text.split('\n').map(str => <p>{str}<br/><br/></p>);
+    return newText
+}
+
 // Usage Example
 export default function TextCardSmall(props: TextCardProps) {
     return (
@@ -31,12 +36,12 @@ export default function TextCardSmall(props: TextCardProps) {
                 <div className={styles.textSection}>
                     <h2 style={{ marginBottom: '25px' }}>{props.headerText}</h2>
                     <p>
-                        {props.bodyText}
+                        {NewLineText(props.bodyText)}
                     </p>
                 </div>
                 <PositionedBox position={props.boxPosition}>
                     <h2>{props.boxHeaderText}</h2>
-                    <p>{props.boxBodyText}</p>
+                    <p>{NewLineText(props.boxBodyText)}</p>
                     {props.hasButton ? <div className={styles.cardLink}>
                         <div className={styles.cardLinkText}>{props.buttonText}</div>
                     </div> : null}
