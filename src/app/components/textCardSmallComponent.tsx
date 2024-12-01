@@ -8,6 +8,8 @@ interface TextCardProps {
     boxPosition: 'left' | 'right'
     buttonText?: string
     hasButton?: boolean
+    textHasButton?: boolean
+    textAreaButtonText?: string
 }
 
 
@@ -38,6 +40,9 @@ export default function TextCardSmall(props: TextCardProps) {
                     <p>
                         {NewLineText(props.bodyText)}
                     </p>
+                    {props.textHasButton ? <div className={styles.cardLink}>
+                        <div className={styles.cardLinkText}>{props.textAreaButtonText}</div>
+                    </div> : null}
                 </div>
                 <PositionedBox position={props.boxPosition}>
                     <h2>{props.boxHeaderText}</h2>
