@@ -35,6 +35,7 @@ export default function TextCardSmall(props: TextCardProps) {
                     </p>
                 </div>
                 <PositionedBox position={props.boxPosition}>
+                    <h2>{props.boxHeaderText}</h2>
                     <p>{props.boxBodyText}</p>
                     {props.hasButton ? <div className={styles.cardLink}>
                         <div className={styles.cardLinkText}>{props.buttonText}</div>
