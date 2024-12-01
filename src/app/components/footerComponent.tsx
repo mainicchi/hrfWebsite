@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./styles/footerStyle.module.css"
 import Link from "next/link"
 
@@ -7,9 +8,7 @@ export default function Footer() {
       <div className={styles.footerLeft}>
         <h1 className={styles.footerTitle}>Historic Race Finland ry</h1>
         <div className={styles.footerSocial}>
-          <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.footerFacebook}>
-            <span className="facebook-icon">F</span> {/* Placeholder for Facebook */}
-          </Link>
+        <Image src="/images/facebook_logo.png" alt="facebook logo" width={50} height={50}></Image>
         </div>
         <p className={styles.footerCopyright}>
           Oikeudet muutoksiin pidätetään. Viimeisin päivitys 00.00.0000 - email@email.com
