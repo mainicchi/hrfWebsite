@@ -5,6 +5,7 @@ import Header from "../components/headerComponent"
 import Footer from "../components/footerComponent"
 import TextCardComponent from "../components/textCardComponent";
 import Navigation from "../components/navComponent"
+import TextCardSmall from "../components/textCardSmallComponent";
 
 export default function Kilpailu() {
   return (
@@ -18,8 +19,7 @@ export default function Kilpailu() {
         <TextCardComponent containsLinkButton={false} headerText={"Historic vakio- ja GT-autot, ikäkaudet G-I"} bodyText={"Historic vakio- ja GT-autot, ikäkaudet G-I Ikäkausien G – I (1.1.1966 – 31.12.1981) vakio/GT -autot ovat ikäkautensa (ykkösryhmäläisi) – sarjatuotantoautoja, joissa on perusluokituksen mukainen tekniikka. Ne kilpailevat muiden historic-luokkien tapaan FIA:n liite K:n säännöillä."} />
         <TextCardComponent containsLinkButton={true} buttonText="Lisätietoja" headerText={"Historic urheiluautoprototyypit"} bodyText={"F/GTP - tilavuus vapaa, ikäkausi F"} />
         <TextCardComponent containsLinkButton={true} buttonText="Lisätietoja" headerText={"Fiat Historic Ratapotti"} bodyText={"Fiat Historic Ratapotti -sarja ajaa muiden ykkösryhmäläisten joukossa. Sen kalusto koostuu huokeasti ylläpidettävistä Fiat 127:sta (ryhmä 1), jotka ovat vuosimalliltaan 1971–81 (Mk1 ja Mk2). Moottorina näissä on 903 cc, jota ei saa virittää. Autot ovat luokitustodistuksen 5415:n sekä sallituiden muutoksien mukaisia."} />
-        <h4>Historic Formulat</h4>
-        <p>Historic Formulat ovat pääsääntöisesti aitoja ja alkuperäisiä aikakautensa kilpailuhistorian omaavia kilpa-autoja. Merkittävässä tienraivaajan osassa maamme formulahistoriassa ovat olleet Volkswagenin Type 1 -tekniikkaan (VW kupla) perustuvat Formula V:t vuosilta 1966–1981. Muita lähdöissä nähtäviä historiallisia monopostoja ovat Formula Fordit sekä uudemmat Formula V:t, Formula 3:set ja Formula 4:set. Historic Formulat ajavat kansainvälisillä FIA liite K:n sekä aikakautensa säännöillä.</p>
+        <TextCardSmall boxPosition="right" boxHeaderText="Historic Formulat" bodyText="Historic Formulat ovat pääsääntöisesti aitoja ja alkuperäisiä aikakautensa kilpailuhistorian omaavia kilpa-autoja. Merkittävässä tienraivaajan osassa maamme formulahistoriassa ovat olleet Volkswagenin Type 1 -tekniikkaan (VW kupla) perustuvat Formula V:t vuosilta 1966–1981. Muita lähdöissä nähtäviä historiallisia monopostoja ovat Formula Fordit sekä uudemmat Formula V:t, Formula 3:set ja Formula 4:set. Historic Formulat ajavat kansainvälisillä FIA liite K:n sekä aikakautensa säännöillä."></TextCardSmall>
         <h2 className={styles.secondTitle}>Tulokset</h2>
         <TextCardComponent containsLinkButton={true} buttonText="Lisätietoja" headerText={""} bodyText={"Tulokset ajantasaisesti kisaviikonloppuna HRF:llä on kilpailussa reaaliaikainen ajanoton seuranta. Tuloksia voi seurata kilpailun aikana mobiililaitteilla Race-Monitor -sovelluksella, jonka voi ladata (Android, iOS ja Windows Phone -laitteille) ja web-selaimella (selaimessa on oltava Flash-tuki)."} />
         <TextCardComponent containsLinkButton={true} buttonText="Lisätietoja" headerText={""} bodyText={"Tulokset kilpailujen jälkeen Kilpailun tulokset ovat nähtävissä internetissä MYLAPS Speedhive -sivustolla."} />
