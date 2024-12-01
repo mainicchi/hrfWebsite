@@ -1,11 +1,13 @@
 'use client'
 import styles from "./styles/searchbar.module.css"
 import React, { useState, useRef, useEffect } from "react";
+import globalStyles from "../page.module.css"
 
 // Dummy data
 interface LapTime {
   track: string;
   time: string;
+  year: string;
 }
 
 interface Person {
@@ -19,40 +21,43 @@ const people: Person[] = [
     firstName: "Mikko",
     lastName: "Virtanen",
     lapTimes: [
-      { track: "Kemora", time: "01:12.34" },
-      { track: "Veteli", time: "01:08.90" },
-      { track: "Jurva", time: "01:09.76" },
-      { track: "Ahvenisto", time: "01:14.58" },
+      { track: "Kemora", time: "01:12.34", year: "2016" },
+      { track: "Veteli", time: "01:08.90", year: "2016" },
+      { track: "Jurva", time: "01:09.76", year: "2013" },
+      { track: "Ahvenisto", time: "01:14.58", year: "2016" },
     ],
   },
   {
     firstName: "Anna",
     lastName: "Korhonen",
     lapTimes: [
-      { track: "Kemora", time: "01:11.45" },
-      { track: "Veteli", time: "01:09.12" },
-      { track: "Jurva", time: "01:10.23" },
-      { track: "Ahvenisto", time: "01:13.87" },
+      { track: "Kemora", time: "01:11.45", year: "2016" },
+      { track: "Veteli", time: "01:09.12", year: "2016" },
+      { track: "Jurva", time: "01:10.23", year: "2016" },
+      { track: "Ahvenisto", time: "01:13.87", year: "2016" },
     ],
   },
   {
     firstName: "Jukka",
     lastName: "Lehtinen",
     lapTimes: [
-      { track: "Kemora", time: "01:12.78" },
-      { track: "Veteli", time: "01:08.56" },
-      { track: "Jurva", time: "01:09.98" },
-      { track: "Ahvenisto", time: "01:14.23" },
+      { track: "Kemora", time: "01:12.78", year: "2016" },
+      { track: "Veteli", time: "01:08.56", year: "2016" },
+      { track: "Jurva", time: "01:09.98", year: "2016" },
+      { track: "Ahvenisto", time: "01:14.23", year: "2016" },
     ],
   },
 ];
 
 const SearchBarWithDropdown: React.FC = () => {
   const [query, setQuery] = useState<string>(""); // Search query for name
-  const [selectedTrack, setSelectedTrack] = useState<string>("Kemora"); // Selected track
+  const [selectedTrack, setSelectedTrack] = useState<string>(""); // Selected track
   const [filteredTime, setFilteredTime] = useState<string | null>(null); // Filtered lap time
+  const [filteredYear, setFilteredYear] = useState<string | null>(null); // Filtered lap time
   const [isSearchPerformed, setIsSearchPerformed] = useState<boolean>(false); // Tracks if search has been performed
   const [suggestions, setSuggestions] = useState<string[]>([]); // Autocomplete suggestions
+  const [person, setSearchedPerson] = useState<string>("");
+  const [track, setSearchedTrack] = useState<string>("");
 
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -95,7 +100,11 @@ const SearchBarWithDropdown: React.FC = () => {
   }, []);
 
   // Handle search and filter
-  const handleSearch = () => {
+  const handleSearch = (event: React.FormEvent) => {
+    event.preventDefault();
+    if(!selectedTrack) {
+      return;
+    }
     const lowerQuery = query.toLowerCase();
 
     const person = people.find(
@@ -106,8 +115,16 @@ const SearchBarWithDropdown: React.FC = () => {
     if (person) {
       const lap = person.lapTimes.find((l) => l.track === selectedTrack);
       setFilteredTime(lap ? lap.time : null);
+      setFilteredYear(lap ? lap.year : null);
+      setSearchedPerson(person.firstName + " " + person.lastName)
+      if (lap == undefined) {
+        setSearchedTrack("Kemora")
+      } else {
+        setSearchedTrack(lap.track)
+      }
     } else {
       setFilteredTime(null);
+      setFilteredYear(null);
     }
 
     setIsSearchPerformed(true); // Mark search as performed
@@ -162,6 +179,7 @@ const SearchBarWithDropdown: React.FC = () => {
         onChange={(e) => setSelectedTrack(e.target.value)}
         className={styles.dropdown}
       >
+        <option value="" disabled hidden>Valitse rata</option>
         <option value="Kemora">Kemora</option>
         <option value="Veteli">Veteli</option>
         <option value="Jurva">Jurva</option>
@@ -169,23 +187,38 @@ const SearchBarWithDropdown: React.FC = () => {
       </select>
 
       {/* Search Button */}
-      <button
-        onClick={handleSearch}
-        className={styles.button}
-      >
-        Search
-      </button>
+      <div className={styles.buttonContainer}>
+        <button
+          onClick={handleSearch}
+          className={styles.button}>
+          Etsi aikoja
+        </button>
+      </div>
 
       {/* Render Filtered Lap Time */}
-      <div>
+      <div style={{ width: "100%", display: "flex" }}>
         {isSearchPerformed && (
-          filteredTime ? (
-            <p>
-              Lap time for <strong>{query}</strong> on <strong>{selectedTrack}</strong> is:{" "}
-              <strong>{filteredTime}</strong>
-            </p>
+          selectedTrack ? (
+            <div className={styles.card}>
+              <div className={styles.row}>
+              <span className={styles.headerCell}>Nimi</span>
+              <span className={styles.headerCell}>Rata</span>
+              <span className={styles.headerCell}>Aika</span>
+              <span className={styles.headerCell}>Vuosi</span>
+              </div>
+            <div className={styles.rowNoline}>
+              <span className={styles.cell}>{person}</span>
+              <span className={styles.cell}>{track}</span>
+              <span className={styles.cell}>{filteredTime}</span>
+              <span className={styles.cell}>{filteredYear}</span>
+            </div>
+          </div>
           ) : (
-            <p>No matching result found</p>
+            <div className={styles.card}>
+              <div className={styles.row}>
+                <span className={styles.headerCell}> Valitse rata</span>
+              </div>
+            </div>
           )
         )}
       </div>
