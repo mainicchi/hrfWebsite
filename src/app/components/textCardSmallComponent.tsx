@@ -25,7 +25,7 @@ const PositionedBox = ({ position, children }: BoxProps) => {
 };
 
 function NewLineText(text: string) {
-    const newText = text.split('\n').map(str => <p>{str}<br/><br/></p>);
+    const newText = text.split('\n').map(str => <p>{str}<br/></p>);
     return newText
 }
 
