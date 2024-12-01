@@ -8,6 +8,10 @@ export default function Laptime() {
     <div className={styles.page}>
       <main className={styles.main}>
         <h1 className={styles.headerTitle}>Kierrosajat</h1>
+        <div className={styles.sectionTitle}>
+          <div className={styles.underline}>
+          </div>
+        </div>
         <SearchBarWithDropdown/>
       </main>
     </div>

@@ -15,11 +15,12 @@ interface TextCardProps {
 type BoxProps = {
     position: 'left' | 'right';
     children: React.ReactNode;
+    hasButton: boolean
 };
 
-const PositionedBox = ({ position, children }: BoxProps) => {
+const PositionedBox = ({ position, children, hasButton}: BoxProps) => {
     return (
-        <div className={`${styles.positionedBox} ${styles[position]}`}>
+        <div className={`${styles.positionedBox} ${styles[position]} ${hasButton ? styles.differentColor : styles.positionedBox}` }>
             {children}
         </div>
     );
@@ -29,14 +30,14 @@ const PositionedBox = ({ position, children }: BoxProps) => {
 export default function DoubleTextCard(props: TextCardProps) {
     return (
             <div className={styles.container}>
-                <PositionedBox position={'left'}>
+                <PositionedBox position={'left'} hasButton={props.firstBoxHasButton || false}>
                     <h2>{props.boxHeaderText}</h2>
                     <p>{props.boxBodyText}</p>
                     {props.firstBoxHasButton ? <div className={styles.cardLink}>
                         <div className={styles.cardLinkText}>{props.firstBoxButtonText}</div>
                     </div> : null}
                 </PositionedBox>
-                <PositionedBox position={'right'}>
+                <PositionedBox position={'right'} hasButton={props.secondBoxHasButton || false}>
                     <h2>{props.secondBoxHeaderText}</h2>
                     <p>{props.secondBoxBodyText}</p>
                     {props.secondBoxHasButton ? <div className={styles.cardLink}>
