@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 8px;
+    align-self: center;
+    height: 90px;
+    width: 100%;
+
+    .dropdown {
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        width: 200px;
+        background-color: #EFF4F9;
+        color:black;
+        width: 10%;
+    }
+
+    .input {
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        width: 200px;
+        background-color: #EFF4F9;
+        color:black;
+        width: 50%;
+    }
+
+    .button {
+        padding: 8px 16px;
+        background-color: #EFF4F9;
+        color: black;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+}

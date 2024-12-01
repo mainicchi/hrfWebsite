@@ -14,7 +14,7 @@ export default function Kilpailijoille() {
           </div>
         </div>
         <TextComponent pictureOnRight={true} containsLinkButton={true} buttonText="Lisätietoja" headerText={"Nopeimmat kierrosajat"} bodyText={"Kilpailuun hyväksytään vain kirjalliset sähköisellä lomakkeella tehdyt ilmoittautumiset. Jotta ilmoittautuminen on pätevä tulee lomake olla kaikilta tarvittavilta osilta täytetty ja osallistumismaksu maksettu ajallaan. Ilmoittautumispäivän jälkeen maksaneilta peritään lisämaksu."} pictureLink="/images/kilpailijoille.png" />
-        <TextCardComponent containsLinkButton={true} buttonText=" Kilpailija-aikojen seurantajärjestelmään" headerText={" Kilpailija-aikojen seurantajärjestelmään"} bodyText={"Tämän toiminnallisuuden avulla voit hakea ja tarkastella parhaita aikojasi valitsemillasi radoilla ja haluamiltasi vuosilta."}/>
+        <TextCardComponent containsLinkButton={true} buttonText=" Kilpailija-aikojen seurantajärjestelmään" headerText={" Kilpailija-aikojen seurantajärjestelmään"} bodyText={"Tämän toiminnallisuuden avulla voit hakea ja tarkastella parhaita aikojasi valitsemillasi radoilla ja haluamiltasi vuosilta."} buttonLinkDestination="/laptime" />
         <div className={styles.sectionTitle}>
           <div className={styles.underline}>
           </div>
