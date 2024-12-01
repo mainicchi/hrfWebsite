@@ -19,7 +19,7 @@ export default function TextCardComponent(props: TextCardComponentProps) {
     const router = useRouter();
     return (
         props.containsLinkButton ?
-        <div className={styles.card}>
+        <div className={styles.cardColor}>
             <div className={styles.cardHeader}>{props.headerText}
             </div>
             <div className={styles.cardBody}>{NewLineText(props.bodyText)}</div>

@@ -16,11 +16,12 @@ interface TextCardProps {
 type BoxProps = {
     position: 'left' | 'right';
     children: React.ReactNode;
+    hasButton?: boolean
 };
 
-const PositionedBox = ({ position, children }: BoxProps) => {
+const PositionedBox = ({ position, children, hasButton }: BoxProps) => {
     return (
-        <div className={`${styles.positionedBox} ${styles[position]}`}>
+        <div className={`${styles[position]} ${hasButton ? styles.differentColor : styles.positionedBox}`}>
             {children}
         </div>
     );
@@ -44,7 +45,7 @@ export default function TextCardSmall(props: TextCardProps) {
                         <div className={styles.cardLinkText}>{props.textAreaButtonText}</div>
                     </div> : null}
                 </div>
-                <PositionedBox position={props.boxPosition}>
+                <PositionedBox position={props.boxPosition} hasButton={props.hasButton}>
                     <h2>{props.boxHeaderText}</h2>
                     <p>{NewLineText(props.boxBodyText)}</p>
                     {props.hasButton ? <div className={styles.cardLink}>

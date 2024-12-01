@@ -5,7 +5,7 @@
     padding-right: 75px;
     padding-top: 81px;
     padding-bottom: 81px;
-    background: #8DBBE1;
+    background: #8DBBE180;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -34,6 +34,44 @@
         line-height: 39px;
         word-wrap: break-word;
     }
+}
+
+.cardColor {
+  height: 25%;
+  width: 60%;
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-top: 81px;
+  padding-bottom: 81px;
+  background: #8DBBE1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 46;
+  display: inline-flex;
+  align-self: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+  margin-bottom: 20px;
+
+  .cardHeader {
+      align-self: stretch;
+      color: black;
+      font-size: 36px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      word-wrap: break-word;
+  }
+
+  .cardBody {
+      align-self: stretch;
+      color: black;
+      font-size: 18px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      line-height: 39px;
+      word-wrap: break-word;
+  }
 }
 
 .cardLink {
@@ -111,5 +149,42 @@
   }
   
   .positionedBox.left {
+    order: -1; /* Moves box to the left */
+  }
+
+  .differentColor {
+    height: 25%;
+    width: 40%;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 81px;
+    padding-bottom: 81px;
+    background: #8DBBE180;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 46;
+    display: inline-flex;
+    align-self: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+    
+    color: black;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 39px;
+  }
+
+  .differentColor img {
+    width: 100%; /* Ensures the image fits within the box */
+    border-radius: 8px; /* Optional: match box radius */
+  }
+  
+  .differentColor.right {
+    order: 2; /* Default for placing on the right */
+  }
+  
+  .differentColor.left {
     order: -1; /* Moves box to the left */
   }
